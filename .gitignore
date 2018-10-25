@@ -31,6 +31,7 @@ bower_components
 
 # Compiled binary addons (https://nodejs.org/api/addons.html)
 build/Release
+product/
 
 # Dependency directories
 node_modules/
@@ -46,7 +47,7 @@ typings/
 .eslintcache
 
 # Optional REPL history
-.node_repl_history
+.node_repl_historyauth0
 
 # Output of 'npm pack'
 *.tgz
@@ -59,3 +60,9 @@ typings/
 
 # next.js build output
 .next
+
+package-lock.json
+*.js
+*.css
+*.map
+config/default.js
