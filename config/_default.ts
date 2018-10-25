@@ -6,24 +6,24 @@ module.exports = {
         "protocol": "http",
         "cache": "no-cache",
         "timeout": 100000,
-        "ua": "SYSTEM_NAME",
+        "ua": "*USER_AGENT*",
         "use_publickey": true,
         "dav": false,
         "db": {
             "address": "localhost",
-            "user": "DB_USERNAME",
-            "password": "DB_PASSWORD",
-            "name": "DB_NAME"
+            "user": "*DB_USERNAME*",
+            "password": "*DB_PASSWORD*",
+            "name": "*DB_NAME*"
         },
         "regist": {
             "user": true,
             "member": true,
             "expire": 60
         },
-        "sessionname": "SYSTEM_NAME",
-        "sessionsecret": "Daisy, Daisy.",
-        "tokensecret": "Yes We therefore I think we",
-        "key2": "Man is a thinking reed",
+        "sessionname": "*SESSION_NAME*",
+        "sessionsecret": "*SESSION_SECRET*",
+        "tokensecret": "*TOKEN_SECRET*",
+        "key2": "*KEY*",
         "!ssl" : {
             "key" : "",
             "cert": ""
@@ -50,8 +50,8 @@ module.exports = {
                 "auth": 1,
                 "groupid": "000000000000000000000000",
                 "userid": "000000000000000000000000",
-                "username": "USER_NAME_0",
-                "password": "PASSWORD",
+                "username": "*USER_NAME_0*",
+                "password": "*PASSWORD*",
                 "metadata":{
                     "nickname": "system"
                 }
@@ -60,8 +60,8 @@ module.exports = {
                 "auth": 100,
                 "groupid": "000000000000000000000000",
                 "userid": "000000000000000000000001",
-                "username": "USER_NAME_1",
-                "password": "PASSWORD",
+                "username": "*USER_NAME_1*",
+                "password": "*PASSWORD*",
                 "metadata": {
                     "nickname": "user"
                 }
@@ -70,8 +70,8 @@ module.exports = {
                 "auth": 500,
                 "groupid": "000000000000000000000000",
                 "userid": "000000000000000000000003",
-                "username": "USER_NAME_3",
-                "password": "PASSWORD",
+                "username": "*USER_NAME_3*",
+                "password": "*PASSWORD*",
                 "metadata": {
                     "nickname": "member"
                 }
@@ -80,8 +80,8 @@ module.exports = {
                 "auth": 1000,
                 "groupid": "000000000000000000000000",
                 "userid": "000000000000000000000004",
-                "username": "USER_NAME_4",
-                "password": "PASSWORD",
+                "username": "*USER_NAME_4*",
+                "password": "*PASSWORD*",
                 "metadata": {
                     "nickname": "temp"
                 }
@@ -90,8 +90,8 @@ module.exports = {
                 "auth": 10000,
                 "groupid": "000000000000000000000000",
                 "userid": "000000000000000000000005",
-                "username": "USER_NAME_5",
-                "password": "PASSWORD",
+                "username": "*USER_NAME_5*",
+                "password": "*PASSWORD*",
                 "metadata": {
                     "nickname": "guest"
                 }
@@ -103,7 +103,7 @@ module.exports = {
             "key": {
                 "clientID": "",
                 "clientSecret": "",
-                "callbackURL": "https://seventh-code.com/auth/facebook/callback"
+                "callbackURL": "https://**DOMAIN**/auth/facebook/callback"
             },
             "accessToken": ""
         },
@@ -113,7 +113,7 @@ module.exports = {
             "key": {
                 "consumerKey": "",
                 "consumerSecret": "",
-                "callbackURL": "https://seventh-code.com/auth/twitter/callback"
+                "callbackURL": "https://**DOMAIN**/auth/twitter/callback"
             }
         },
         "instagram1": {
@@ -122,7 +122,7 @@ module.exports = {
             "key": {
                 "clientID": "",
                 "clientSecret": "",
-                "callbackURL": "https://seventh-code.com/auth/instagram/callback"
+                "callbackURL": "https://**DOMAIN**/auth/instagram/callback"
             }
         },
         "line": {
@@ -131,7 +131,7 @@ module.exports = {
             "key": {
                 "channelID": "",
                 "channelSecret": "",
-                "callbackURL": "https://seventh-code.com/auth/line/callback"
+                "callbackURL": "https://**DOMAIN**/auth/line/callback"
             }
         },
         "mailer": {
