@@ -2,14 +2,14 @@
 
     User authentication made with nean
 
-#Install
+# Install
 
-####npm
+#### npm
 
     > cd open_auth0
     > npm install
 
-####MongoDB
+#### MongoDB
     
     $ mongo  
     > use DB_NAME
