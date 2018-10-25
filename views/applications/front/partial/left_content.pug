@@ -1,0 +1,61 @@
+div
+    div(style={color: "#ffffff", "background-color": "#263238", padding: "1rem", "margin-bottom": "1rem"})
+        div(style={"font-size": "0.8rem", padding: "0.6rem"}) #{local.mails[0]}
+        div(style={"font-size": "0.8rem", padding: "0.6rem"}) #{local.nickname}
+        div(style={padding: "0.6rem"})
+            if role.system
+                i.fas.fa-circle(style={color: "#E91E63"})
+            if role.user
+                i.fas.fa-circle(style={color: "#673AB7"})
+            if role.member
+                i.fas.fa-circle(style={color: "#2196F3"})
+            if role.temp
+                i.fas.fa-circle(style={color: "#009688"})
+            if role.guest
+                i.fas.fa-circle(style={color: "#FFC107"})
+
+    ul.sidebar-menu(style={"font-weight": "500"}, ng-controller="ChatController")
+        if role.system
+            li(style={padding: "0.6rem"})
+                a(href='/users', style={color: "#ffffff"})
+                    i.fas.fa-user.fa-fw.text-info
+                    span(style={"font-size": "0.8rem"}) &nbsp; Users
+        li(style={padding: "0.6rem"})
+            a(href='#', ng-click="showPasswordDialog()", style={color: "#ffffff"})
+                i.fas.fa-key.fa-fw.text-danger
+                span(style={"font-size": "0.8rem"}) &nbsp; #{message.password}
+        li(style={padding: "0.6rem"})
+            a(href='#', ng-click="Logout()", style={color: "#ffffff"})
+                i.fas.fa-sign-out-alt
+                span(style={"font-size": "0.8rem"}) &nbsp; #{message.logout}
+
+        li(style={padding: "0.6rem"})
+            a(href='#', ng-click="showChatDialog()", style={color: "#ffffff"})
+                i.fas.fa-sign-out-alt
+                span(style={"font-size": "0.8rem"}) &nbsp; showChatDialog
+
+
+
+
+
+
+        //li(style={padding: "0.6rem"})
+            a(href='#', ng-click="SocketEnter()", style={color: "#aaaaaa"})
+                i.fas.fa-sign-out-alt
+                span(style={"font-size": "0.8rem"}) &nbsp; Socket Enter
+        //li(style={padding: "0.6rem"})
+            a(href='#', ng-click="SocketLeave()", style={color: "#aaaaaa"})
+                i.fas.fa-sign-out-alt
+                span(style={"font-size": "0.8rem"}) &nbsp; Socket Leave
+        //li(style={padding: "0.6rem"})
+            a(href='#', ng-click="SocketSend()", style={color: "#aaaaaa"})
+                i.fas.fa-sign-out-alt
+                span(style={"font-size": "0.8rem"}) &nbsp; Socket Send
+        //li(style={padding: "0.6rem"})
+            a(href='#', ng-click="Broadcast('HOGE!')", style={color: "#aaaaaa"})
+                i.fas.fa-sign-out-alt
+                span(style={"font-size": "0.8rem"}) &nbsp; Broadcast
+
+        //div(style="color:#ffffff;") {{socket_message}}
+        //div(ng-repeat="item in list" style="line-height:2rem;color:#ffffff;" ng-click="SocketSend(item,'Hello World!!')") {{item}}
+

@@ -1,0 +1,26 @@
+div
+    .modal-header
+        span.h5.modal-title
+    .modal-body
+        .row
+            .col-12(style={"font-weight": "500"})
+                .card
+                    .card-body
+                        //a.btn.btn-info(href='#', ng-click="SocketEnter()") Enter
+                        //a.btn.btn-info(href='#', ng-click="SocketLeave()", style={color: "#aaaaaa"}) Leave
+                        a.btn.btn-danger(href='#', ng-click="Broadcast('HOGE!')", style={color: "#aaaaaa"}) Broadcast
+
+                        .card
+                            a(href='#', ng-repeat="user in userlist", style="line-height:3rem", ng-click="SocketSend(user,input_message)") {{user}}
+
+                        .card
+                            div(ng-repeat="message in messages", style="line-height:3rem") {{message}}
+
+                        .card
+                            input.form-control.no-zoom(tabindex="1", ng-model="input_message", ng-change="Change()" type='text', ng-maxlength="255")
+
+    .modal-footer
+        .row
+            .col-12
+                .text-center(style="margin:2rem;")
+                    button.btn.btn-warning(type="button", ng-click='cancel();', aria-label="") #{message.ok}

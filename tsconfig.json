@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es5",
+        "noImplicitAny": false,
+        "sourceMap": true,
+        "strictNullChecks":true,
+        "strict": true,
+        "types" :  ["node", "lodash", "express"]
+
+    },
+    "exclude": [
+        "node_modules",
+        "public/bower_components"
+    ]
+}
